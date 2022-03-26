@@ -8,9 +8,9 @@ const About = () => {
       <AboutSection>
          <AboutContainer>
             <AboutContent>
-               <h3>Small team, big ideas</h3>
+               <h3>wearher prediction</h3>
                <Button primary="true">
-                  About Us <ArrowRight />
+                  Weather <ArrowRight />
                </Button>
             </AboutContent>
          </AboutContainer>

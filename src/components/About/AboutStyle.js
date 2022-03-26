@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import ImageFive from '../../assets/img/ImageFive.jfif';
+import ImageFive from '../../img/weather.jpg';
 
 const AboutSection = styled.section``;
 
