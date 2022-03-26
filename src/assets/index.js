@@ -78,13 +78,16 @@ const featuresData = [
 
 const footerNav = [
    {
-      title: 'Porfolio',
+      title: 'Crop Prediction',
    },
    {
-      title: 'About',
+      title: 'Pest',
    },
    {
-      title: 'Countact',
+      title: 'Market Stats',
+   },
+   {
+      title: 'Weather',
    },
 ];
 
