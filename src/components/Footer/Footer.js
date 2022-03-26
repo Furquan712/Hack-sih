@@ -12,7 +12,7 @@ const Footer = () => {
    return (
       <FooterMain>
          <FooterContainer>
-            <Logo>D-Arch</Logo>
+            <Logo>Kissan Seva</Logo>
             <FooterNav>
                <ul>
                   {footerNav.map((item, index) => {
