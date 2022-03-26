@@ -12,10 +12,10 @@ const Header = () => {
    return (
       <HeaderMain>
          <HeaderContainer>
-            <Logo>D-ARCH</Logo>
+            <Logo>Kissan Seva</Logo>
             <HeaderNav />
             <HeaderBtn>
-               <Button primary="true">Contact us</Button>
+               <Button primary="true">Weather</Button>
             </HeaderBtn>
          </HeaderContainer>
       </HeaderMain>
