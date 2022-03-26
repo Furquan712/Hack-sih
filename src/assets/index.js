@@ -9,7 +9,7 @@ import ImageEight from '../assets/img/ImageEight.jfif';
 
 const menuData = [
    {
-      title: 'Portfolio',
+      title: 'Crop',
       link: '/portfolio',
    },
    {
