@@ -1,6 +1,7 @@
 import styled from 'styled-components';
-import ImageFour from '../../assets/img/ImageFour.jfif';
-
+import ImageFour from '../../img/far1.png';
+import ImageFive from '../../img/fert3.png';
+import Imagepest from '../../img/pest2.png';
 const InfoSection = styled.section`
    padding: 124px 40px 140px;
 
@@ -52,5 +53,30 @@ const InfoImage = styled.div`
    max-height: 526px;
    margin: 0 auto;
 `;
+const InfoImage1 = styled.div`
+   position: relative;
+   background-image: url(${ImageFive});
+   background-size: 100%;
+   background-repeat: no-repeat;
+   background-position: center;
+   width: 100%;
+   height: 80vw;
+   max-width: 600px;
+   max-height: 526px;
+   margin: 0 auto;
+`;
+const InfoImage3 = styled.div`
+   position: relative;
+   background-image: url(${Imagepest});
+   background-size: 100%;
+   background-repeat: no-repeat;
+   background-position: center;
+   width: 100%;
+   height: 80vw;
+   max-width: 600px;
+   max-height: 526px;
+   margin: 0 auto;
+`;
 
-export { InfoSection, InfoContainer, InfoContent, InfoImage };
+
+export { InfoSection, InfoContainer, InfoContent, InfoImage, InfoImage1, InfoImage3 };

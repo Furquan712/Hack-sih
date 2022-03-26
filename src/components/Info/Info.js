@@ -4,6 +4,8 @@ import {
    InfoContainer,
    InfoContent,
    InfoImage,
+   InfoImage1,
+   InfoImage3
 } from './InfoStyle';
 import { breakpoints } from '../../helper';
 import { Button } from '../Button';
@@ -19,7 +21,7 @@ const Info = () => {
       <InfoSection>
          <InfoContainer>
             <InfoContent>
-               <h2>Welcome to the D-Arch</h2>
+               <h2>Crop Prediction</h2>
                <p>
                   We have a unique network and skillset to help bring your
                   projects to life. Our small team of highly skilled individuals
@@ -39,6 +41,52 @@ const Info = () => {
                <Button primary="true">Learn More</Button>
             </InfoContent>
             {width >= breakpoints && <InfoImage />}
+         </InfoContainer>
+         <InfoContainer>
+            <InfoContent>
+               <h2>Fertilizer Prediction</h2>
+               <p>
+                  We have a unique network and skillset to help bring your
+                  projects to life. Our small team of highly skilled individuals
+                  combined with our large network put us in a strong position to
+                  deliver exceptional results.
+               </p>
+               <p>
+                  Over the past 10 years, we have worked on all kinds of
+                  projects. From stations to high-rise buildings, we create
+                  spaces that inspire and delight.
+               </p>
+               <p>
+                  Over the past 10 years, we have worked on all kinds of
+                  projects. From stations to high-rise buildings, we create
+                  spaces that inspire and delight.
+               </p>
+               <Button primary="true">Learn More</Button>
+            </InfoContent>
+            {width >= breakpoints && <InfoImage1 />}
+         </InfoContainer>
+         <InfoContainer>
+            <InfoContent>
+               <h2>Pest Pridiction</h2>
+               <p>
+                  We have a unique network and skillset to help bring your
+                  projects to life. Our small team of highly skilled individuals
+                  combined with our large network put us in a strong position to
+                  deliver exceptional results.
+               </p>
+               <p>
+                  Over the past 10 years, we have worked on all kinds of
+                  projects. From stations to high-rise buildings, we create
+                  spaces that inspire and delight.
+               </p>
+               <p>
+                  Over the past 10 years, we have worked on all kinds of
+                  projects. From stations to high-rise buildings, we create
+                  spaces that inspire and delight.
+               </p>
+               <Button primary="true">Learn More</Button>
+            </InfoContent>
+            {width >= breakpoints && <InfoImage3 />}
          </InfoContainer>
       </InfoSection>
    );
