@@ -84,10 +84,13 @@ const HeaderBtn = styled.div`
 `;
 
 const HeaderList = styled.ul`
-   display: grid;
+   ${'' /* display: grid;
    grid-template-rows: repeat(3, 100px);
-   align-items: flex-end;
-
+   align-items: flex-end; */}
+   width: 50vw;
+   display: flex;
+   justify-content: center;
+   align-items: center;
    @media screen and (min-width: 769px) {
       grid-template-columns: repeat(3, 110px);
       grid-template-rows: auto;
@@ -99,7 +102,7 @@ const HeaderItem = styled.li`
    text-align: center;
    font-weight: 400;
    font-size: 20px;
-
+   margin: 10px;
    @media screen and (min-width: 769px) {
       font-size: 16px;
    }
@@ -117,9 +120,31 @@ const navLink = css`
 const Logo = styled.a`
    ${navLink}
    font-size: 24px;
-   font-style: italic;
+   ${'' /* font-style: italic; */}
    z-index: 1;
 `;
+
+const Button = styled.button`
+   background: ${({ primary }) => (primary ? '#557B83' : '#cd853f')};
+   white-space: nowrap;
+   outline: none;
+   border: none;
+   min-width: 80px;
+   max-width: 160px;
+   transition: 0.3s;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 10px;
+   padding: ${({ big }) => (big ? '16px 40px' : '10px 24px')};
+   color: ${({ primary }) => (primary ? '#fff' : '#000d1a')};
+   font-size: ${({ big }) => (big ? '20px' : '14px')};
+   cursor: pointer;
+
+   &:hover {
+      transform: translateY(-2px);
+   }
+`
 
 export {
    Nav,
@@ -132,4 +157,5 @@ export {
    Logo,
    ButtonToggle,
    ButtonBars,
+   Button,
 };

@@ -4,9 +4,10 @@ import {
    HeaderContainer,
    Logo,
    HeaderBtn,
+   Button
 } from './HeaderNavStyles';
 import HeaderNav from './HeaderNav';
-import { Button } from '../Button';
+// import { Button } from '../Button';
 
 const Header = () => {
    return (
@@ -15,7 +16,7 @@ const Header = () => {
             <Logo>Kissan Seva</Logo>
             <HeaderNav />
             <HeaderBtn>
-               <Button primary="true">Weather</Button>
+               <Button primary="true">User</Button>
             </HeaderBtn>
          </HeaderContainer>
       </HeaderMain>

@@ -9,16 +9,28 @@ import ImageEight from '../assets/img/ImageEight.jfif';
 
 const menuData = [
    {
-      title: 'Crop Prediction',
-      link: '/portfolio',
+      title: 'Crop',
+      link: '/crop',
+   },
+   {
+      title: 'Fertilizer',
+      link: '/fertilizer',
+   },
+   {
+      title: 'weather',
+      link: '/Weather',
    },
    {
       title: 'Pest',
-      link: '/about',
+      link: '/pest',
    },
    {
       title: 'Market Stats',
-      link: '/Contact',
+      link: '/market',
+   },
+   {
+      title: 'Kisan Greh',
+      link: '/kisan',
    },
 ];
 
