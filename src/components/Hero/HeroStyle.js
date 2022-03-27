@@ -32,7 +32,7 @@ const HeroSlider = styled.div`
    display: flex;
    justify-content: center;
    align-items: center;
-   transition: 0.3s;
+   transition: 0.7s;
 
    &::before {
       content: '';
