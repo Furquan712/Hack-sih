@@ -18,7 +18,7 @@ const menuData = [
    },
    {
       title: 'weather',
-      link: '/Weather',
+      link: '/weather',
    },
    {
       title: 'Pest',
