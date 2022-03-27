@@ -25,7 +25,7 @@ const Hero = ({ slides }) => {
       const prevSlide = () =>
          setCurrIndex(currIndex === 0 ? currSlide - 1 : currIndex - 1);
 
-      timeout.current = setTimeout(nextSlide, 6000);
+      timeout.current = setTimeout(nextSlide, 7500);
 
       const eventKey = event => {
          if (event.key === 'a' || event.key === 'ArrowLeft') {

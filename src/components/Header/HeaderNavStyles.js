@@ -133,6 +133,7 @@ const Button = styled.button`
    max-width: 160px;
    transition: 0.3s;
    display: flex;
+   border-radius: 4px;
    justify-content: center;
    align-items: center;
    gap: 10px;

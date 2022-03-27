@@ -43,6 +43,7 @@ const Info = () => {
             {width >= breakpoints && <InfoImage />}
          </InfoContainer>
          <InfoContainer>
+         {width >= breakpoints && <InfoImage1 />}
             <InfoContent>
                <h2>Fertilizer Prediction</h2>
                <p>
@@ -63,7 +64,7 @@ const Info = () => {
                </p>
                <Button primary="true">Learn More</Button>
             </InfoContent>
-            {width >= breakpoints && <InfoImage1 />}
+            
          </InfoContainer>
          <InfoContainer>
             <InfoContent>
