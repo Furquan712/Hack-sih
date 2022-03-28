@@ -88,7 +88,7 @@ export default function Crop() {
 
 
   return (
-    <Container>
+    <>
       <HeaderMainPage />
       <Box sx={{
         width: `100%`
@@ -156,6 +156,6 @@ export default function Crop() {
           }
         </Box>
       </Box >
-    </Container>
+    </>
   )
 }
