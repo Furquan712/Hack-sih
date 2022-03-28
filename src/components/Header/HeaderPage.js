@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-   HeaderMain,
+   HeaderMainPage,
    HeaderContainer,
    Logo,
    HeaderBtn,
@@ -9,9 +9,9 @@ import {
 import HeaderNav from './HeaderNav';
 // import { Button } from '../Button';
 
-const Header = () => {
+const HeaderPage = () => {
    return (
-      <HeaderMain>
+      <HeaderMainPage>
          <HeaderContainer>
             <Logo>Kissan Seva</Logo>
             <HeaderNav />
@@ -21,8 +21,8 @@ const Header = () => {
                </Button>
             </HeaderBtn>
          </HeaderContainer>
-      </HeaderMain>
+      </HeaderMainPage>
    );
 };
 
-export default Header;
+export default HeaderPage;

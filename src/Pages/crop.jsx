@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import HeaderMainPage from '../components/Header/HeaderPage'
 import {
   Box,
   Typography,
@@ -74,65 +74,68 @@ export default function Crop() {
   }
 
   return (
-    <Box sx={{
-      width: `100%`
-    }}>
+    <>
+      <HeaderMainPage />
       <Box sx={{
-        display: `grid`,
-        placeItems: `center`,
-        paddingTop: `50px`,
+        width: `100%`
       }}>
-        <Typography variant="h5" sx={{
-          marginBottom: `50px`,
+        <Box sx={{
+          display: `grid`,
+          placeItems: `center`,
+          paddingTop: `50px`,
         }}>
-          Find out the most suitable crop to grow in your farm
-        </Typography>
-        <TextField type="number" placeholder="Nitrogen" variant="outlined" label="Nitrogen" value={nitrogen} onChange={updateNitrogen} />
-        <br />
+          <Typography variant="h5" sx={{
+            marginBottom: `50px`,
+          }}>
+            Find out the most suitable crop to grow in your farm
+          </Typography>
+          <TextField type="number" placeholder="Nitrogen" variant="outlined" label="Nitrogen" value={nitrogen} onChange={updateNitrogen} />
+          <br />
 
-        <TextField type="number" placeholder="Phosphorous" variant="outlined" label="Phosphorous" value={phosphorus} onChange={updatePhosphorus} />
-        <br />
+          <TextField type="number" placeholder="Phosphorous" variant="outlined" label="Phosphorous" value={phosphorus} onChange={updatePhosphorus} />
+          <br />
 
-        <TextField type="number" placeholder="Pottasium" variant="outlined" label="Pottasium" value={pottasium} onChange={updatePottasium} />
-        <br />
+          <TextField type="number" placeholder="Pottasium" variant="outlined" label="Pottasium" value={pottasium} onChange={updatePottasium} />
+          <br />
 
-        <TextField type="number" placeholder="Temperature" variant="outlined" label="Temperature" value={temperature} onChange={updateTemperature} />
-        <br />
+          <TextField type="number" placeholder="Temperature" variant="outlined" label="Temperature" value={temperature} onChange={updateTemperature} />
+          <br />
 
-        <TextField type="number" placeholder="Humidity" variant="outlined" label="Humidity" value={humidity} onChange={updateHumidity} />
-        <br />
+          <TextField type="number" placeholder="Humidity" variant="outlined" label="Humidity" value={humidity} onChange={updateHumidity} />
+          <br />
 
-        <TextField type="number" placeholder="pH level" variant="outlined" label="pH level" value={ph} onChange={updatePh} />
-        <br />
+          <TextField type="number" placeholder="pH level" variant="outlined" label="pH level" value={ph} onChange={updatePh} />
+          <br />
 
-        <TextField type="number" placeholder="Rainfall (mm)" variant="outlined" label="Rainfall (mm)" value={rainfall} onChange={updateRainfall} />
-        <br />
+          <TextField type="number" placeholder="Rainfall (mm)" variant="outlined" label="Rainfall (mm)" value={rainfall} onChange={updateRainfall} />
+          <br />
 
-        <Button onClick={submitForm} sx={{
-          margin: `20px 0`,
-        }}>
-          Predict My Crop!
-        </Button>
+          <Button onClick={submitForm} sx={{
+            margin: `20px 0`,
+          }}>
+            Predict My Crop!
+          </Button>
 
-        {
-          crop && (
-            <>
-              <Button onClick={() => {
-                setCrop(null)
-              }} sx={{
-                marginBottom: `20px`,
-              }}>
-                Clear Crop
-              </Button>
-              <Typography variant="h5" sx={{
-                marginBottom: `20px`,
-              }}>
-                You can grow {crop} in your farm.
-              </Typography>
-            </>
-          )
-        }
-      </Box>
-    </Box >
+          {
+            crop && (
+              <>
+                <Button onClick={() => {
+                  setCrop(null)
+                }} sx={{
+                  marginBottom: `20px`,
+                }}>
+                  Clear Crop
+                </Button>
+                <Typography variant="h5" sx={{
+                  marginBottom: `20px`,
+                }}>
+                  You can grow {crop} in your farm.
+                </Typography>
+              </>
+            )
+          }
+        </Box>
+      </Box >
+    </>
   )
 }

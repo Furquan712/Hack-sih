@@ -12,6 +12,7 @@ import {
    HeroSliderButton,
    SliderButton,
 } from './HeroStyle';
+import Header from '../Header/Header'
 
 const Hero = ({ slides }) => {
    const [currIndex, setCurrIndex] = useState(0);
@@ -53,18 +54,20 @@ const Hero = ({ slides }) => {
    if (!Array.isArray(slides) || slides.length <= 0) return null;
 
    return (
-      <HeroSection>
-         <HeroContainer>
-            {slides.map(
-               (slide, index) =>
-                  currIndex === index && (
-                     <HeroSlide key={index}>
-                        <HeroSlider>
-                           <HeroImage src={slide.image} />
-                           <HeroContent>
-                              <h1>{slide.title}</h1>
-                              <p>{slide.price}</p>
-                              <Button
+      <>
+         <Header/>
+         <HeroSection>
+            <HeroContainer>
+               {slides.map(
+                  (slide, index) =>
+                     currIndex === index && (
+                        <HeroSlide key={index}>
+                           <HeroSlider>
+                              <HeroImage src={slide.image} />
+                              <HeroContent>
+                                 <h1>{slide.title}</h1>
+                                 <p>{slide.price}</p>
+                                 {/* <Button
                                  primary="true"
                                  css={`
                                     max-width: 200px;
@@ -78,22 +81,23 @@ const Hero = ({ slides }) => {
                                        fill: #fff;
                                     `}
                                  />
-                              </Button>
-                           </HeroContent>
-                        </HeroSlider>
-                     </HeroSlide>
-                  )
-            )}
-            <HeroSliderButton>
-               <SliderButton onClick={prevSlide} primary="true">
-                  <ArrowLeft />
-               </SliderButton>
-               <SliderButton onClick={nextSlide} primary="true">
-                  <ArrowRight />
-               </SliderButton>
-            </HeroSliderButton>
-         </HeroContainer>
-      </HeroSection>
+                              </Button> */}
+                              </HeroContent>
+                           </HeroSlider>
+                        </HeroSlide>
+                     )
+               )}
+               <HeroSliderButton>
+                  <SliderButton onClick={prevSlide} primary="true">
+                     <ArrowLeft />
+                  </SliderButton>
+                  <SliderButton onClick={nextSlide} primary="true">
+                     <ArrowRight />
+                  </SliderButton>
+               </HeroSliderButton>
+            </HeroContainer>
+         </HeroSection>
+      </>
    );
 };
 

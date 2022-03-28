@@ -1,6 +1,8 @@
 import styled, { css } from 'styled-components/macro';
 
-const Nav = styled.nav``;
+const Nav = styled.nav`
+   
+`;
 
 const HeaderMain = styled.header`
    left: 0;
@@ -8,6 +10,14 @@ const HeaderMain = styled.header`
    position: absolute;
    width: 100%;
    z-index: 100;
+`;
+const HeaderMainPage = styled.header`
+   left: 0;
+   padding: 40px 32px 16px;
+   position: absolute;
+   width: 100%;
+   z-index: 100;
+   background-color: #000d1a;
 `;
 
 const HeaderContainer = styled.div`
@@ -159,4 +169,5 @@ export {
    ButtonToggle,
    ButtonBars,
    Button,
+   HeaderMainPage,
 };

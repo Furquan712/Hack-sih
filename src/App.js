@@ -1,7 +1,6 @@
 import React from 'react';
 import GlobalStyle from './globalStyles';
 import Index from './Pages';
-import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Crop from './Pages/crop'
 import MarketStat from './Pages/marketStat';
@@ -20,7 +19,7 @@ const App = () => {
       <>
          <Router>
             <GlobalStyle />
-            <Header />
+            {/* <Header /> */}
             <Routes>
                <Route exact path='/' element={<Index />} />
                <Route exact path='/crop' element={<Crop />} />
