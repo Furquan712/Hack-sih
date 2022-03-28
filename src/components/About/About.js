@@ -3,6 +3,7 @@ import { AboutSection, AboutContainer, AboutContent } from './AboutStyle';
 import { ReactComponent as ArrowRight } from '../../assets/img/arrow-right.svg';
 import { Button } from '../Button';
 
+
 const About = () => {
    return (
       <AboutSection>
@@ -10,7 +11,7 @@ const About = () => {
             <AboutContent>
                <h3>wearher prediction</h3>
                <Button primary="true">
-                  Weather <ArrowRight />
+               <a target="_blank" href="https://kissanmoasam.netlify.app/"> Weather <ArrowRight /> </a>
                </Button>
             </AboutContent>
          </AboutContainer>

@@ -9,6 +9,7 @@ import {
 } from './InfoStyle';
 import { breakpoints } from '../../helper';
 import { Button } from '../Button';
+import { Link } from 'react-router-dom';
 
 const Info = () => {
    const [width, setWidth] = useState(window.innerWidth);
@@ -38,7 +39,9 @@ const Info = () => {
                   projects. From stations to high-rise buildings, we create
                   spaces that inspire and delight.
                </p>
-               <Button primary="true">Learn More</Button>
+               <Button primary="true">
+               <Link to='/crop'>Crop Prediction</Link>
+               </Button>
             </InfoContent>
             {width >= breakpoints && <InfoImage />}
          </InfoContainer>
@@ -62,13 +65,15 @@ const Info = () => {
                   projects. From stations to high-rise buildings, we create
                   spaces that inspire and delight.
                </p>
-               <Button primary="true">Learn More</Button>
+               <Button primary="true">
+               <Link to='/fertilizer'>Fertilizer Prediction</Link>
+               </Button>
             </InfoContent>
             
          </InfoContainer>
          <InfoContainer>
             <InfoContent>
-               <h2>Pest Pridiction</h2>
+               <h2>Pest Prediction</h2>
                <p>
                   We have a unique network and skillset to help bring your
                   projects to life. Our small team of highly skilled individuals
@@ -85,7 +90,9 @@ const Info = () => {
                   projects. From stations to high-rise buildings, we create
                   spaces that inspire and delight.
                </p>
-               <Button primary="true">Learn More</Button>
+               <Button primary="true">
+               <Link to='/pest'>Pest</Link>
+               </Button>
             </InfoContent>
             {width >= breakpoints && <InfoImage3 />}
          </InfoContainer>
