@@ -11,8 +11,13 @@ function BackendApi(endpoint = '') {
 function BackendCropApi(endpoint = '') {
     return BackendApi(`crop/${endpoint}`)
 }
-export { BackendApi };
 
+function BackendFertilizerApi(endpoint = '') {
+    return BackendApi(`fertilizer/${endpoint}`)
+}
+
+export { BackendApi };
 export { BackendCropApi };
+export { BackendFertilizerApi };
 
 export { MEDIA_URL };
