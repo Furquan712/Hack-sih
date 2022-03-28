@@ -143,7 +143,13 @@ export default function Crop() {
                 <Typography variant="h5" sx={{
                   marginBottom: `20px`,
                 }}>
-                  You can grow {crop} in your farm.
+                  <div style={{
+                    borderRadius: `3px`,
+                    backgroundColor: `#E1BBC9`,
+                    width: `100%`,
+                    padding: `20px`,
+                    fontSize: `25px`,
+                  }} dangerouslySetInnerHTML={{ __html: "You can grow <b>" + crop + "</b> in your farm." }} />
                 </Typography>
               </>
             )
