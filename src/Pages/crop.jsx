@@ -12,6 +12,17 @@ import {
 } from '../Backend';
 
 import axios from "axios";
+import styled from 'styled-components';
+
+
+const Container = styled.div`
+  width: 100%;
+  ${'' /* height: 100vh; */}
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`
+
 
 export default function Crop() {
 
@@ -73,8 +84,11 @@ export default function Crop() {
       })
   }
 
+
+
+
   return (
-    <>
+    <Container>
       <HeaderMainPage />
       <Box sx={{
         width: `100%`
@@ -136,6 +150,6 @@ export default function Crop() {
           }
         </Box>
       </Box >
-    </>
+    </Container>
   )
 }
