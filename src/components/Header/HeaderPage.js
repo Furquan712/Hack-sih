@@ -7,13 +7,17 @@ import {
    Button
 } from './HeaderNavStyles';
 import HeaderNav from './HeaderNav';
+import { Link } from 'react-router-dom';
+
 // import { Button } from '../Button';
 
 const HeaderPage = () => {
    return (
       <HeaderMainPage>
          <HeaderContainer>
-            <Logo>Kissan Seva</Logo>
+            <Logo> 
+            <Link to='/'>Kissan Seva</Link>
+            </Logo>
             <HeaderNav />
             <HeaderBtn>
                <Button primary="true">
