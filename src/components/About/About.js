@@ -9,9 +9,14 @@ const About = () => {
       <AboutSection>
          <AboutContainer>
             <AboutContent>
-               <h3>wearher prediction</h3>
+               <h3>Let's Predict your week</h3>
+               <pre>
+                  Weather Prediction is done with satellite navigation to provide you the data so that you can
+                  <br />
+                  time your crops and their need accordingly
+               </pre>
                <Button primary="true">
-               <a target="_blank" href="https://kissanmoasam.netlify.app/"> Weather <ArrowRight /> </a>
+                  <a target="_blank" href="https://kissanmoasam.netlify.app/"> Weather</a>
                </Button>
             </AboutContent>
          </AboutContainer>

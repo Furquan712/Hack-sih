@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import ImageFive from '../../img/weather.jpg';
+// import Image from '../../img/weather.jpg';
+import Image from '../../assets/img/weather.jpg'
 
 const AboutSection = styled.section``;
 
@@ -7,6 +8,7 @@ const AboutContainer = styled.div`
    position: relative;
    padding: 0 40px;
    z-index: 1;
+
 
    @media screen and (max-width: 768px) {
       padding: 0px 28px;
@@ -18,13 +20,14 @@ const AboutContent = styled.div`
    flex-direction: column;
    justify-content: center;
    align-items: flex-start;
-   padding-left: 14%;
-   background-image: url(${ImageFive});
+   padding-left: 5%;
+   background-image: url(${Image});
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
    min-height: 370px;
    z-index: 1;
+
 
    &::before {
       content: '';
@@ -41,6 +44,14 @@ const AboutContent = styled.div`
       font-size: 40px;
       margin-bottom: 0.9rem;
       color: #ffffff;
+   }
+
+   pre{
+      font-size: 22px;
+      margin-bottom: 0.9rem;
+      color: #ffffff;
+      text-overflow: ellipsis;
+      overflow: hidden;
    }
 `;
 

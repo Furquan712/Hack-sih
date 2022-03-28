@@ -11,6 +11,7 @@ export const Button = styled.button`
    display: flex;
    justify-content: center;
    align-items: center;
+   text-align: center;
    gap: 10px;
    border-radius: 4px;
    padding: ${({ big }) => (big ? '16px 40px' : '14px 24px')};
@@ -21,4 +22,5 @@ export const Button = styled.button`
    &:hover {
       transform: translateY(-2px);
    }
+   
 `;
