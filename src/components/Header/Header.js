@@ -8,12 +8,14 @@ import {
 } from './HeaderNavStyles';
 import HeaderNav from './HeaderNav';
 // import { Button } from '../Button';
-
+import { Link } from 'react-router-dom';
 const Header = () => {
    return (
       <HeaderMain>
          <HeaderContainer>
-            <Logo>Kissan Seva</Logo>
+            <Logo>
+               <Link to='/'>Kissan Seva</Link>
+            </Logo>
             <HeaderNav />
             <HeaderBtn>
                <Button primary="true">
