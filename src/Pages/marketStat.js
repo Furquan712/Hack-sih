@@ -1,7 +1,14 @@
 import React from 'react'
-
-export default function MarketStat() {
+import HeaderMainPage from '../components/Header/HeaderPage'
+import styled from 'styled-components'
+const Box = styled.div`
+  height: 80vh;
+`
+export default function Market() {
   return (
-    <div>MarketStat</div>
+    <>
+      <HeaderMainPage />
+      <Box />
+    </>
   )
 }

@@ -1,3 +1,4 @@
+import HeaderMainPage from '../components/Header/HeaderPage'
 import { useState } from 'react';
 
 import {
@@ -58,6 +59,9 @@ export default function Crop() {
   }
 
   return (
+
+    <>
+    <HeaderMainPage />
     <Box sx={{
       width: `100%`
     }}>
@@ -65,6 +69,7 @@ export default function Crop() {
         display: `grid`,
         placeItems: `center`,
         paddingTop: `50px`,
+        height: `100vh`,
       }}>
         <Typography variant="h5" sx={{
           marginBottom: `50px`,
@@ -109,5 +114,6 @@ export default function Crop() {
         }
       </Box>
     </Box >
+    </>
   )
 }
