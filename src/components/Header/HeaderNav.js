@@ -42,7 +42,8 @@ const HeaderNav = () => {
                   <Link to='/fertilizer'>Fertilizer</Link>
                </HeaderItem>
                <HeaderItem>
-                  <Link to='/weather'>Weather</Link>
+                  {/* <Link to='https://kissanmoasam.netlify.app/'>Weather</Link> */}
+                  <a href="https://kissanmoasam.netlify.app/">Weather</a>
                </HeaderItem>
                <HeaderItem>
                   <Link to='/pest'>Pest</Link>
