@@ -14,7 +14,7 @@ const Header = () => {
       <HeaderMain>
          <HeaderContainer>
             <Logo>
-               <Link to='/'>Kissan Seva</Link>
+               <Link to='/'>Kisan Seva</Link>
             </Logo>
             <HeaderNav />
             <HeaderBtn>
