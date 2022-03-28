@@ -73,9 +73,10 @@ const FeaturesLink = styled.div`
 const FeaturesText = styled.div`
    position: absolute;
    left: 10px;
-   bottom: 25px;
+   bottom: 10px;
    width: 100%;
    color: #ffffff;
+   
 
    h4 {
       font-size: 24px;

@@ -2,10 +2,13 @@ import ImageOne from '../assets/img/Ai.png';
 import ImageTwo from '../assets/img/Ai2.jpg';
 import ImageThree from '../assets/img/farmer5.jpg';
 import ImageNine from '../assets/img/farmer4.jpg';
-
-import ImageSix from '../assets/img/ImageSix.jfif';
-import ImageSeven from '../assets/img/ImageSeven.jfif';
-import ImageEight from '../assets/img/ImageEight.jfif';
+import Crop from '../assets/img/crop.jpg'
+import fertilizer from './img/fertilizer.jpg'
+import pest from './img/pest.jpg'
+import imgtwo from './img/2.jpg'
+import imgthree from './img/3.jpg'
+import imgfour from './img/4.jpg'
+import imgfive from './img/5.jpg'
 
 const menuData = [
    {
@@ -36,55 +39,58 @@ const menuData = [
 
 const sliderData = [
    {
-      title: 'Crop Prediction',
-      price: 'Project made for an art museum near Toronto, Canada. Project Paramour is a statement of bold, modern architecture.',
+      title: 'Weather Prediction',
+      price: 'weather forecasting, the prediction of the weather through application of the principles of physics, supplemented by a variety of statistical and empirical techniques.',
       path: '/portfolio',
       label: 'See Our Portfolio',
-      image: ImageOne,
+      image: imgtwo,
       alt: 'Building',
    },
    {
-      title: 'Weather Prediction',
-      price: 'The Seraph Station project challenged us to design a unique station that would transport people through time. The result is a fresh and futuristic model inspired by space stations.',
+      title: 'Crop Prediction',
+      price: 'Accurate predictions of suitable crops for cultivation improve production levels. Crop prediction attributes are defined by multiple factors such as genotype, climate and the interactions between the two.',
       path: '/portfolio',
       label: 'See Our Portfolio',
-      image: ImageTwo,
+      image: imgfour,
       alt: 'Building',
    },
    {
       title: 'Market Stats',
-      price: 'A sequel theme project for a tower originally built in the 1800s. We achieved this with a striking look of brutal minimalism with modern touches.',
+      price: 'The analysis of performance of a farm business is usually done in two alternative ways: enterprise analysis and whole farm business analysis. Enterprise analysis deals with determination of profitability of individual farm enterprises by applying detailed cost accounting.',
       path: '/portfolio',
       label: 'See Our Portfolio',
-      image: ImageThree,
+      image: imgfive,
       alt: 'Building',
    },
 
    {
       title: 'Pest',
-      price: 'D-Arch challenged us to make a concept for a 84 story building located in the middle of a city with a high earthquake frequency. For this project we used curves to blend design and stability to meet our objectives.',
+      price: 'Pest Prediction aims to produce cutting edge research to provide pest and disease monitoring and forecast information to support decision making in the sustainable management of insect pests and diseases.',
       path: '/portfolio',
       label: 'See Our Portfolio',
-      image: ImageNine,
+      image: imgthree,
       alt: 'Building',
    },
 ];
 
 const featuresData = [
    {
-      title: 'Project Del Sol',
-      label: 'View All Projects',
-      image: ImageSix,
+      title: 'Crop Prediction',
+      label: 'Accurate predictions of suitable crops for cultivation improve production levels. Crop prediction attributes are defined by multiple factors for best reults.',
+      image: Crop,
+      link: "https://www.sciencedirect.com/science/article/pii/S0168169920302301"
    },
    {
-      title: '228B Tower',
-      label: 'View All Projects',
-      image: ImageSeven,
+      title: 'Fertilizer Prediction',
+      label: 'System is designed to be used by farmers for suggestion of fertilizers to be used based on a set of soil features e.g. soil moisture, Ca, Potassium, soil pH etc. ',
+      image: fertilizer,
+      link: 'https://www.ijeast.com/papers/371-376,Tesma405,IJEAST.pdf'
    },
    {
-      title: 'Le Prototype',
-      label: 'View All Projects',
-      image: ImageEight,
+      title: 'Pest Prediction',
+      label: 'Aims to provide pest and disease monitoring and forecast information to support decision making in the sustainable management of insect pests and diseases.',
+      image: pest,
+      link: 'https://www.sciencedirect.com/science/article/pii/S2212667814000100'
    },
 ];
 

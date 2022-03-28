@@ -16,7 +16,7 @@ const Features = () => {
       <FeaturesSection>
          <FeaturesContainer>
             <FeaturesHeading>
-               <h3>Featured</h3>
+               <h3>Agriculture Research</h3>
                <Button primary="true">See all</Button>
             </FeaturesHeading>
             <FeaturesContent>
@@ -28,7 +28,7 @@ const Features = () => {
                         >
                            <FeaturesText>
                               <h4>{feature.title}</h4>
-                              <a href="/">{feature.label}</a>
+                              <a href={feature.link}>{feature.label}</a>
                            </FeaturesText>
                         </FeaturesLink>
                      </FeaturesItem>
