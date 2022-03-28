@@ -116,7 +116,7 @@ const HeroContent = styled.div`
 const HeroSliderButton = styled.div`
    position: absolute;
    bottom: 50px;
-   right: 50px;
+   left : 50px;
    display: flex;
    z-index: 10;
 `;
