@@ -52,7 +52,7 @@ const HeaderNav = () => {
                   <Link to='/market'>Market Stats</Link>
                </HeaderItem>
                <HeaderItem>
-                  <Link to='/kisan'>Kisan greh</Link>
+               <a target="_blank" href="https://kissangreh.netlify.app/">kissangreh</a>
                </HeaderItem>
                
             </HeaderList>

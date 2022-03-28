@@ -78,7 +78,7 @@ const featuresData = [
       title: 'Crop Prediction',
       label: 'Accurate predictions of suitable crops for cultivation improve production levels. Crop prediction attributes are defined by multiple factors for best reults.',
       image: Crop,
-      link: "https://www.sciencedirect.com/science/article/pii/S0168169920302301"
+      link: "https://www.sciencedirect.com/science/article/pii/S0168169920302301/pdfft?isDTMRedir=true&download=true"
    },
    {
       title: 'Fertilizer Prediction',
@@ -90,7 +90,7 @@ const featuresData = [
       title: 'Pest Prediction',
       label: 'Aims to provide pest and disease monitoring and forecast information to support decision making in the sustainable management of insect pests and diseases.',
       image: pest,
-      link: 'https://www.sciencedirect.com/science/article/pii/S2212667814000100'
+      link: 'https://www.sciencedirect.com/science/article/pii/S2212667814000100/pdfft?isDTMRedir=true&download=true'
    },
 ];
 

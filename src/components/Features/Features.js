@@ -28,7 +28,7 @@ const Features = () => {
                         >
                            <FeaturesText>
                               <h4>{feature.title}</h4>
-                              <a href={feature.link}>{feature.label}</a>
+                              <a target="_blank" href={feature.link}>{feature.label}</a>
                            </FeaturesText>
                         </FeaturesLink>
                      </FeaturesItem>
