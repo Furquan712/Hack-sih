@@ -61,59 +61,65 @@ export default function Crop() {
   return (
 
     <>
-    <HeaderMainPage />
-    <Box sx={{
-      width: `100%`
-    }}>
+      <HeaderMainPage />
       <Box sx={{
-        display: `grid`,
-        placeItems: `center`,
-        paddingTop: `50px`,
-        height: `100vh`,
+        width: `100%`
       }}>
-        <Typography variant="h5" sx={{
-          marginBottom: `50px`,
+        <Box sx={{
+          display: `grid`,
+          placeItems: `center`,
+          paddingTop: `50px`,
+          height: `100vh`,
         }}>
-          Find out the most suitable crop to grow in your farm
-        </Typography>
-        <TextField type="text" placeholder="Crop Name" variant="outlined" label="Crop Name" value={cropName} onChange={updateCropName} />
-        <br />
+          <Typography variant="h5" sx={{
+            marginBottom: `50px`,
+          }}>
+            Find out the most suitable crop to grow in your farm
+          </Typography>
+          <TextField type="text" placeholder="Crop Name" variant="outlined" label="Crop Name" value={cropName} onChange={updateCropName} />
+          <br />
 
-        <TextField type="number" placeholder="Nitrogen" variant="outlined" label="Nitrogen" value={nitrogen} onChange={updateNitrogen} />
-        <br />
+          <TextField type="number" placeholder="Nitrogen" variant="outlined" label="Nitrogen" value={nitrogen} onChange={updateNitrogen} />
+          <br />
 
-        <TextField type="number" placeholder="Phosphorous" variant="outlined" label="Phosphorous" value={phosphorus} onChange={updatePhosphorus} />
-        <br />
+          <TextField type="number" placeholder="Phosphorous" variant="outlined" label="Phosphorous" value={phosphorus} onChange={updatePhosphorus} />
+          <br />
 
-        <TextField type="number" placeholder="Pottasium" variant="outlined" label="Pottasium" value={pottasium} onChange={updatePottasium} />
-        <br />
+          <TextField type="number" placeholder="Pottasium" variant="outlined" label="Pottasium" value={pottasium} onChange={updatePottasium} />
+          <br />
 
-        <Button onClick={submitForm} sx={{
-          margin: `20px 0`,
-        }}>
-          Predict My Fertilizer!
-        </Button>
+          <Button onClick={submitForm} sx={{
+            margin: `20px 0`,
+          }}>
+            Predict My Fertilizer!
+          </Button>
 
-        {
-          fertilizer && (
-            <>
-              <Button onClick={() => {
-                setFertilizer(null)
-              }} sx={{
-                marginBottom: `20px`,
-              }}>
-                Clear fertilizer
-              </Button>
-              <Typography variant="h5" sx={{
-                marginBottom: `20px`,
-              }}>
-                You can grow {fertilizer} in your farm.
-              </Typography>
-            </>
-          )
-        }
-      </Box>
-    </Box >
+          {
+            fertilizer && (
+              <>
+                <Button onClick={() => {
+                  setFertilizer(null)
+                }} sx={{
+                  marginBottom: `20px`,
+                }}>
+                  Clear fertilizer
+                </Button>
+                <Typography variant="h5" sx={{
+                  marginBottom: `20px`,
+                }}>
+                  <div style={{
+                    borderRadius: `3px`,
+                    backgroundColor: `#E1BBC9`,
+                    width: `60%`,
+                    margin: `0 20%`,
+                    padding: `50px`,
+                  }} dangerouslySetInnerHTML={{ __html: fertilizer }} />
+                </Typography>
+              </>
+            )
+          }
+        </Box>
+      </Box >
     </>
   )
 }
