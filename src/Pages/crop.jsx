@@ -1,76 +1,138 @@
-// import * as React from 'react';
-// import Box from '@mui/material/Box';
-// import IconButton from '@mui/material/IconButton';
-// import Input from '@mui/material/Input';
-// import FilledInput from '@mui/material/FilledInput';
-// import OutlinedInput from '@mui/material/OutlinedInput';
-// import InputLabel from '@mui/material/InputLabel';
-// import InputAdornment from '@mui/material/InputAdornment';
-// import FormHelperText from '@mui/material/FormHelperText';
-// import FormControl from '@mui/material/FormControl';
-// import TextField from '@mui/material/TextField';
-// import Visibility from '@mui/icons-material/Visibility';
-// import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { useState } from 'react';
 
-// export default function InputAdornments() {
-//   const [values, setValues] = React.useState({
-//     amount: '',
-//     password: '',
-//     weight: '',
-//     weightRange: '',
-//     showPassword: false,
-//   });
+import {
+  Box,
+  Typography,
+  TextField,
+  Button
+} from '@mui/material';
 
-//   const handleChange = (prop) => (event) => {
-//     setValues({ ...values, [prop]: event.target.value });
-//   };
+import {
+  BackendCropApi
+} from '../Backend';
 
-//   const handleClickShowPassword = () => {
-//     setValues({
-//       ...values,
-//       showPassword: !values.showPassword,
-//     });
-//   };
+import axios from "axios";
 
-//   const handleMouseDownPassword = (event) => {
-//     event.preventDefault();
-//   };
+export default function Crop() {
 
-//   return (
-//     <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
-//       <div>
-//         <TextField
-//           label="With normal TextField"
-//           id="outlined-start-adornment"
-//           sx={{ m: 1, width: '25ch' }}
-//           InputProps={{
-//             startAdornment: <InputAdornment position="start">kg</InputAdornment>,
-//           }}
-//         />
-//         <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-//           <OutlinedInput
-//             id="outlined-adornment-weight"
-//             value={values.weight}
-//             onChange={handleChange('weight')}
-//             endAdornment={<InputAdornment position="end">kg</InputAdornment>}
-//             aria-describedby="outlined-weight-helper-text"
-//             inputProps={{
-//               'aria-label': 'weight',
-//             }}
-//           />
-//         </FormControl>
-//       </div>
-//     </Box>
-//   );
-// }
+  const [crop, setCrop] = useState(null);
 
+  const [nitrogen, setNitrogen] = useState(null);
+  const [phosphorus, setPhosphorus] = useState(null);
+  const [pottasium, setPottasium] = useState(null);
+  const [temperature, setTemperature] = useState(null);
+  const [humidity, setHumidity] = useState(null);
+  const [rainfall, setRainfall] = useState(null);
+  const [ph, setPh] = useState(null);
 
-import React from 'react'
+  const updateNitrogen = (e) => {
+    setNitrogen(e.target.value);
+  }
 
-const Crop= () =>{
+  const updatePhosphorus = (e) => {
+    setPhosphorus(e.target.value);
+  }
+
+  const updatePottasium = (e) => {
+    setPottasium(e.target.value);
+  }
+
+  const updateTemperature = (e) => {
+    setTemperature(e.target.value);
+  }
+
+  const updateHumidity = (e) => {
+    setHumidity(e.target.value);
+  }
+
+  const updateRainfall = (e) => {
+    setRainfall(e.target.value);
+  }
+
+  const updatePh = (e) => {
+    setPh(e.target.value);
+  }
+
+  const submitForm = () => {
+    const data = Object.values({
+      nitrogen,
+      phosphorus,
+      pottasium,
+      temperature,
+      humidity,
+      ph,
+      rainfall
+    });
+
+    axios.post(BackendCropApi(), { crop_attributes: data })
+      .then(res => {
+        setCrop(res.data.prediction);
+      })
+      .catch(err => {
+        alert(err);
+      })
+  }
+
   return (
-    <h1>Crop</h1>
+    <Box sx={{
+      width: `100%`
+    }}>
+      <Box sx={{
+        display: `grid`,
+        placeItems: `center`,
+        paddingTop: `50px`,
+      }}>
+        <Typography variant="h5" sx={{
+          marginBottom: `50px`,
+        }}>
+          Find out the most suitable crop to grow in your farm
+        </Typography>
+        <TextField type="number" placeholder="Nitrogen" variant="outlined" label="Nitrogen" value={nitrogen} onChange={updateNitrogen} />
+        <br />
+
+        <TextField type="number" placeholder="Phosphorous" variant="outlined" label="Phosphorous" value={phosphorus} onChange={updatePhosphorus} />
+        <br />
+
+        <TextField type="number" placeholder="Pottasium" variant="outlined" label="Pottasium" value={pottasium} onChange={updatePottasium} />
+        <br />
+
+        <TextField type="number" placeholder="Temperature" variant="outlined" label="Temperature" value={temperature} onChange={updateTemperature} />
+        <br />
+
+        <TextField type="number" placeholder="Humidity" variant="outlined" label="Humidity" value={humidity} onChange={updateHumidity} />
+        <br />
+
+        <TextField type="number" placeholder="pH level" variant="outlined" label="pH level" value={ph} onChange={updatePh} />
+        <br />
+
+        <TextField type="number" placeholder="Rainfall (mm)" variant="outlined" label="Rainfall (mm)" value={rainfall} onChange={updateRainfall} />
+        <br />
+
+        <Button onClick={submitForm} sx={{
+          margin: `20px 0`,
+        }}>
+          Predict My Crop!
+        </Button>
+
+        {
+          crop && (
+            <>
+              <Button onClick={() => {
+                setCrop(null)
+              }} sx={{
+                marginBottom: `20px`,
+              }}>
+                Clear Crop
+              </Button>
+              <Typography variant="h5" sx={{
+                marginBottom: `20px`,
+              }}>
+                You can grow {crop} in your farm.
+              </Typography>
+            </>
+          )
+        }
+      </Box>
+    </Box >
   )
 }
-
-export default Crop;
