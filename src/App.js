@@ -27,7 +27,7 @@ const App = () => {
                <Route exact path='/kisan' element={<KrishiGreh />} />
                <Route exact path='/pest' element={<Pest />} />
             </Routes>
-            <Footer />
+            {/* <Footer /> */}
          </Router>
 
       </>
