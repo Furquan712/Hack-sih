@@ -10,7 +10,7 @@ import {
 import { Bar } from 'react-chartjs-2';
 import HeaderMainPage from '../components/Header/HeaderPage'
 import { useState } from 'react';
-
+import img from '../img/agri.png';
 import {
   Box,
   Typography,
@@ -23,6 +23,20 @@ import {
 } from '../Backend';
 
 import axios from "axios";
+import styled from 'styled-components';
+
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`
+const Inner = styled.div`
+  display: flex;
+  flex-direction: column;
+
+`
 
 export default function Crop() {
 
@@ -85,32 +99,53 @@ export default function Crop() {
     <>
       <HeaderMainPage />
       <Box sx={{
-        width: `100%`
+        width: `100%`,
+        height: `100vh`
       }}>
         <Box sx={{
           display: `grid`,
           placeItems: `center`,
           paddingTop: `50px`,
-          height: `100vh`,
+          // height: `100vh`,
+          // marginTop: `1.123rem`
         }}>
-          <Typography variant="h5" sx={{
-            marginTop: `50px`,
-          }}>
-            Find out the most suitable crop to grow in your farm
-          </Typography>
+          <Container>
 
-          <TextField type="text" placeholder="State Name" variant="outlined" label="State Name" value={stateName} onChange={updateStateName} />
-          <br />
+            <img src={img} alt="" style={{
+              width: "30vw"
+            }}/>
 
-          <TextField type="text" placeholder="Crop Name" variant="outlined" label="Crop Name" value={cropName} onChange={updateCropName} />
-          <br />
+            <Inner>
+              <Typography variant="h5" sx={{
+                marginTop: `50px`,
+              }}>
+                <br />
+                <br />
+                <br />
+                Find out the most suitable crop to grow in your farm
+              </Typography>
+              <br />
+              <br />
 
-          <Button onClick={submitForm} sx={{
-            margin: `20px 0`,
-          }}>
-            Get Market Stats!
-          </Button>
 
+              <TextField type="text" placeholder="State Name" variant="outlined" label="State Name" value={stateName} onChange={updateStateName} sx={{
+                margin: `0`,
+              }} />
+              <br />
+
+              <TextField type="text" placeholder="Crop Name" variant="outlined" label="Crop Name" value={cropName} onChange={updateCropName} />
+              <br />
+
+              <Button onClick={submitForm} sx={{
+                margin: `20px 0`,
+              }}>
+                Get Market Stats!
+              </Button>
+            
+            </Inner>
+          
+              
+          </Container>
           {
             marketStats && (
               <>
