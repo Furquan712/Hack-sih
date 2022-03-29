@@ -7,16 +7,14 @@ import {
   Button
 } from '@mui/material';
 
-import img1 from '../assets/img/farm1.png'
-import img2 from '../assets/img/farm2.png'
-
-
 import {
   BackendCropApi
 } from '../Backend';
 
 import axios from "axios";
 import styled from 'styled-components';
+import img1 from '../assets/img/farm1.png'
+import img2 from '../assets/img/farm2.png'
 
 
 const Container = styled.div`
@@ -109,15 +107,18 @@ export default function Crop() {
           paddingTop: `50px`,
         }}>
           <Container>
-            <img src={img1} alt="" style={{
+
+          <img src={img1} alt="" style={{
               width: "15rem",
               marginBottom: "2rem"
-            }}/>
+            }} />
             <Inner>
+
+
               <Typography variant="h5" sx={{
                 marginBottom: `50px`,
               }}>
-                {/* Find out the most suitable crop to grow in your farm */}
+                Find out the most suitable crop to grow in your farm
               </Typography>
               <TextField type="number" placeholder="Nitrogen" variant="outlined" label="Nitrogen" value={nitrogen} onChange={updateNitrogen} />
               <br />
@@ -133,6 +134,8 @@ export default function Crop() {
 
               <TextField type="number" placeholder="Humidity" variant="outlined" label="Humidity" value={humidity} onChange={updateHumidity} />
               <br />
+              <TextField type="text" placeholder="State" variant="outlined" label="state" />
+              <br />
 
               <TextField type="number" placeholder="pH level" variant="outlined" label="pH level" value={ph} onChange={updatePh} />
               <br />
@@ -146,11 +149,11 @@ export default function Crop() {
                 Predict My Crop!
               </Button>
             </Inner>
+
             <img src={img2} alt="" style={{
               width: "20rem"
-            }}/>
+            }} />
           </Container>
-
           {
             crop && (
               <>
@@ -177,6 +180,6 @@ export default function Crop() {
           }
         </Box>
       </Box >
-    </>
+    </ >
   )
 }

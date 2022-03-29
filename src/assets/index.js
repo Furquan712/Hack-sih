@@ -48,7 +48,7 @@ const sliderData = [
    },
    {
       title: 'Crop Prediction',
-      price: 'Accurate predictions of suitable crops for cultivation improve production levels. Crop prediction attributes are defined by multiple factors such as genotype, climate and the interactions between the two.',
+      price: 'Accurate predictions of suitable Grains for cultivation improve production levels. Crop prediction attributes are defined by multiple factors such as genotype, climate and the interactions between the two.',
       path: '/portfolio',
       label: 'See Our Portfolio',
       image: imgfour,
@@ -76,7 +76,7 @@ const sliderData = [
 const featuresData = [
    {
       title: 'Crop Prediction',
-      label: 'Accurate predictions of suitable crops for cultivation improve production levels. Crop prediction attributes are defined by multiple factors for best reults.',
+      label: 'Accurate predictions of suitable Grains for cultivation improve production levels. Crop prediction attributes are defined by multiple factors for best reults.',
       image: Crop,
       link: "https://www.sciencedirect.com/science/article/pii/S0168169920302301/pdfft?isDTMRedir=true&download=true"
    },

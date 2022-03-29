@@ -24,7 +24,7 @@ const Info = () => {
             <InfoContent>
                <h2>Crop Prediction</h2>
                <p>
-                  Accurate predictions of suitable crops for cultivation improve production levels. Crop prediction attributes are defined by multiple factors such as genotype, climate and the interactions between the two
+                  Accurate predictions of suitable Grains for cultivation improve production levels. Crop prediction attributes are defined by multiple factors such as genotype, climate and the interactions between the two
                </p>
                <p>
                   Accurate crop prediction needs a fundamental understanding of the functional relationship between cultivation and interactive factors like the genotype and climate
