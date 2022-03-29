@@ -13,7 +13,7 @@ const About = () => {
                <pre>
                   Weather Prediction is done with satellite navigation to provide you the data so that you can
                   <br />
-                  time your crops and their need accordingly
+                  time your Grains and their need accordingly
                </pre>
                <Button primary="true">
                   <a target="_blank" href="https://kissanmoasam.netlify.app/"> Weather</a>
