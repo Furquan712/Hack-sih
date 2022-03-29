@@ -15,7 +15,8 @@ import {
   Box,
   Typography,
   TextField,
-  Button
+  Button,
+  Autocomplete
 } from '@mui/material';
 
 import {
@@ -30,10 +31,6 @@ export default function Crop() {
 
   const [stateName, setStateName] = useState(null);
   const [cropName, setCropName] = useState(null);
-
-  const updateStateName = (e) => {
-    setStateName(e.target.value);
-  }
 
   const updateCropName = (e) => {
     setCropName(e.target.value);
@@ -99,8 +96,51 @@ export default function Crop() {
             Find out the most suitable crop to grow in your farm
           </Typography>
 
-          <TextField type="text" placeholder="State Name" variant="outlined" label="State Name" value={stateName} onChange={updateStateName} />
-          <br />
+          <Autocomplete
+            disablePortal
+            id="combo-box-demo"
+            options={
+              ["Andhra Pradesh",
+                "Arunachal Pradesh",
+                "Assam",
+                "Bihar",
+                "Chhattisgarh",
+                "Goa",
+                "Gujarat",
+                "Haryana",
+                "Himachal Pradesh",
+                "Jammu and Kashmir",
+                "Jharkhand",
+                "Karnataka",
+                "Kerala",
+                "Madhya Pradesh",
+                "Maharashtra",
+                "Manipur",
+                "Meghalaya",
+                "Mizoram",
+                "Nagaland",
+                "Odisha",
+                "Punjab",
+                "Rajasthan",
+                "Sikkim",
+                "Tamil Nadu",
+                "Telangana",
+                "Tripura",
+                "Uttarakhand",
+                "Uttar Pradesh",
+                "West Bengal",
+                "Andaman and Nicobar Islands",
+                "Chandigarh",
+                "Dadra and Nagar Haveli",
+                "Daman and Diu",
+                "Delhi",
+                "Lakshadweep",
+                "Puducherry"]
+            }
+            sx={{ width: 300 }}
+            renderInput={(params) => <TextField {...params} label="Choose a Target Language..." />}
+            onChange={(event, option) => { setStateName(option) }}
+          />
 
           <TextField type="text" placeholder="Crop Name" variant="outlined" label="Crop Name" value={cropName} onChange={updateCropName} />
           <br />
