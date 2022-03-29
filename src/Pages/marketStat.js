@@ -72,7 +72,7 @@ export default function Crop() {
             {
               label: `Market stats for Grains in ${res.data.crop_attributes.state}`,
               data: getIndexValues(res.data.prediction, 2),
-              backgroundColor: 'rgba(255, 99, 132, 0.5)',
+              backgroundColor: 'green',
             }
           ]
         })
