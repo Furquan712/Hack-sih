@@ -4,6 +4,7 @@ import Info from '../components/Info/Info';
 import { sliderData } from '../assets';
 import About from '../components/About/About';
 import Features from '../components/Features/Features';
+import Footer from '../components/Footer/Footer';
 
 const Index = () => {
   return (
@@ -12,6 +13,7 @@ const Index = () => {
       <Info />
       <About />
       <Features />
+      <Footer/>
     </>
   );
 };

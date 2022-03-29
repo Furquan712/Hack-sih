@@ -12,7 +12,27 @@ import {
   BackendFertilizerApi
 } from '../Backend';
 
+import styled from 'styled-components';
+
+
 import axios from "axios";
+import img1 from '../assets/img/farm1.png'
+import img2 from '../assets/img/farm2.png'
+
+const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`
+
+const Inner = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 
+`
 
 export default function Crop() {
 
@@ -71,28 +91,43 @@ export default function Crop() {
           paddingTop: `50px`,
           height: `100vh`,
         }}>
-          <Typography variant="h5" sx={{
-            marginBottom: `50px`,
-          }}>
-            Find out the most suitable crop to grow in your farm
-          </Typography>
-          <TextField type="text" placeholder="Crop Name" variant="outlined" label="Crop Name" value={cropName} onChange={updateCropName} />
-          <br />
+          <Container>
+            <img src={img1} alt="" style={{
+              width: "15rem",
+              marginBottom: "2rem"
+            }} />
+            <Inner>
+              <Typography variant="h5" sx={{
+                marginBottom: `50px`,
+                width: `30vw`
+              }}>
+                Find out the most suitable crop to grow in your farm
+              </Typography>
+              <TextField type="text" placeholder="Crop Name" variant="outlined" label="Crop Name" value={cropName} onChange={updateCropName} />
+              <br />
 
-          <TextField type="number" placeholder="Nitrogen" variant="outlined" label="Nitrogen" value={nitrogen} onChange={updateNitrogen} />
-          <br />
+              <TextField type="number" placeholder="Nitrogen" variant="outlined" label="Nitrogen" value={nitrogen} onChange={updateNitrogen} />
+              <br />
 
-          <TextField type="number" placeholder="Phosphorous" variant="outlined" label="Phosphorous" value={phosphorus} onChange={updatePhosphorus} />
-          <br />
+              <TextField type="number" placeholder="Phosphorous" variant="outlined" label="Phosphorous" value={phosphorus} onChange={updatePhosphorus} />
+              <br />
 
-          <TextField type="number" placeholder="Pottasium" variant="outlined" label="Pottasium" value={pottasium} onChange={updatePottasium} />
-          <br />
+              <TextField type="number" placeholder="Pottasium" variant="outlined" label="Pottasium" value={pottasium} onChange={updatePottasium} />
+              <br />
 
-          <Button onClick={submitForm} sx={{
-            margin: `20px 0`,
-          }}>
-            Predict My Fertilizer!
-          </Button>
+              <Button onClick={submitForm} sx={{
+                margin: `20px 0`,
+              }}>
+
+                Predict My Fertilizer!
+              </Button>
+            </Inner>
+
+            <img src={img2} alt="" style={{
+              width: "20rem"
+            }} />
+          </Container>
+
 
           {
             fertilizer && (
