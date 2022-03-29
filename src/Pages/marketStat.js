@@ -121,7 +121,12 @@ export default function Crop() {
                 }}>
                   Clear Market Stats
                 </Button>
-                <Bar data={marketStats} />
+                <Box sx={{
+                  width: `80%`,
+                  margin: `0 10%`
+                }}>
+                  <Bar data={marketStats} />
+                </Box>
               </>
             )
           }
