@@ -10,7 +10,7 @@ import {
 import { Bar } from 'react-chartjs-2';
 import HeaderMainPage from '../components/Header/HeaderPage'
 import { useState } from 'react';
-
+import img from '../img/agri.png';
 import {
   Box,
   Typography,
@@ -24,6 +24,20 @@ import {
 } from '../Backend';
 
 import axios from "axios";
+import styled from 'styled-components';
+
+const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+`
+const Inner = styled.div`
+  display: flex;
+  flex-direction: column;
+
+`
 
 export default function Crop() {
 
@@ -56,7 +70,7 @@ export default function Crop() {
           labels: getIndexValues(res.data.prediction, 1),
           datasets: [
             {
-              label: `Market stats for crops in ${res.data.crop_attributes.state}`,
+              label: `Market stats for Grains in ${res.data.crop_attributes.state}`,
               data: getIndexValues(res.data.prediction, 2),
               backgroundColor: 'rgba(255, 99, 132, 0.5)',
             }
@@ -82,74 +96,92 @@ export default function Crop() {
     <>
       <HeaderMainPage />
       <Box sx={{
-        width: `100%`
+        width: `100%`,
+        height: `100vh`
       }}>
         <Box sx={{
           display: `grid`,
           placeItems: `center`,
           paddingTop: `50px`,
-          height: `100vh`,
+          // height: `100vh`,
+          // marginTop: `1.123rem`
         }}>
-          <Typography variant="h5" sx={{
-            marginTop: `50px`,
-          }}>
-            Find out the most suitable crop to grow in your farm
-          </Typography>
+          <Container>
 
-          <Autocomplete
-            disablePortal
-            id="combo-box-demo"
-            options={
-              ["Andhra Pradesh",
-                "Arunachal Pradesh",
-                "Assam",
-                "Bihar",
-                "Chhattisgarh",
-                "Goa",
-                "Gujarat",
-                "Haryana",
-                "Himachal Pradesh",
-                "Jammu and Kashmir",
-                "Jharkhand",
-                "Karnataka",
-                "Kerala",
-                "Madhya Pradesh",
-                "Maharashtra",
-                "Manipur",
-                "Meghalaya",
-                "Mizoram",
-                "Nagaland",
-                "Odisha",
-                "Punjab",
-                "Rajasthan",
-                "Sikkim",
-                "Tamil Nadu",
-                "Telangana",
-                "Tripura",
-                "Uttarakhand",
-                "Uttar Pradesh",
-                "West Bengal",
-                "Andaman and Nicobar Islands",
-                "Chandigarh",
-                "Dadra and Nagar Haveli",
-                "Daman and Diu",
-                "Delhi",
-                "Lakshadweep",
-                "Puducherry"]
-            }
-            sx={{ width: 300 }}
-            renderInput={(params) => <TextField {...params} label="Choose a Target Language..." />}
-            onChange={(event, option) => { setStateName(option) }}
-          />
+            <img src={img} alt="" style={{
+              width: "30vw"
+            }} />
 
-          <TextField type="text" placeholder="Crop Name" variant="outlined" label="Crop Name" value={cropName} onChange={updateCropName} />
-          <br />
+            <Inner>
+              <Typography variant="h5" sx={{
+                marginTop: `50px`,
+              }}>
+                <br />
+                <br />
+                <br />
+                Find out the most profitable crop to grow in your state
+              </Typography>
+              <br />
+              <br />
 
-          <Button onClick={submitForm} sx={{
-            margin: `20px 0`,
-          }}>
-            Get Market Stats!
-          </Button>
+              <Autocomplete
+                disablePortal
+                id="combo-box-demo"
+                options={
+                  ["Andhra Pradesh",
+                    "Arunachal Pradesh",
+                    "Assam",
+                    "Bihar",
+                    "Chhattisgarh",
+                    "Goa",
+                    "Gujarat",
+                    "Haryana",
+                    "Himachal Pradesh",
+                    "Jammu and Kashmir",
+                    "Jharkhand",
+                    "Karnataka",
+                    "Kerala",
+                    "Madhya Pradesh",
+                    "Maharashtra",
+                    "Manipur",
+                    "Meghalaya",
+                    "Mizoram",
+                    "Nagaland",
+                    "Odisha",
+                    "Punjab",
+                    "Rajasthan",
+                    "Sikkim",
+                    "Tamil Nadu",
+                    "Telangana",
+                    "Tripura",
+                    "Uttarakhand",
+                    "Uttar Pradesh",
+                    "West Bengal",
+                    "Andaman and Nicobar Islands",
+                    "Chandigarh",
+                    "Dadra and Nagar Haveli",
+                    "Daman and Diu",
+                    "Delhi",
+                    "Lakshadweep",
+                    "Puducherry"]
+                }
+                sx={{ width: 300 }}
+                renderInput={(params) => <TextField {...params} label="Choose state..." />}
+                onChange={(event, option) => { setStateName(option) }}
+              />
+
+              {/* <TextField type="text" placeholder="Crop Name" variant="outlined" label="Crop Name" value={cropName} onChange={updateCropName} /> */}
+              <br />
+
+              <Button onClick={submitForm} sx={{
+                margin: `20px 0`,
+              }}>
+                Get Market Stats!
+              </Button>
+
+            </Inner>
+
+          </Container>
 
           {
             marketStats && (

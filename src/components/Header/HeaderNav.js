@@ -36,7 +36,7 @@ const HeaderNav = () => {
             <HeaderList>
 
                <HeaderItem>
-                  <Link to='/crop'>Crop</Link>
+                  <Link to='/crop'>Grains</Link>
                </HeaderItem>
                <HeaderItem>
                   <Link to='/fertilizer'>Fertilizer</Link>
