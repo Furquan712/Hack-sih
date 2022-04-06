@@ -19,6 +19,7 @@ const App = () => {
       <>
          <Router>
             <GlobalStyle />
+            
             <Routes>
                <Route exact path='/' element={<Index />} />
                <Route exact path='/crop' element={<Crop />} />
